@@ -80,7 +80,17 @@ async def on_message(message):
         return
 
     if message.content.startswith('Send!'):
-        random_text = make_text(make_chains(open_and_read_file(filenames)))
+        random_text = make_text(chains)
         await message.channel.send(random_text)
 
 client.run(os.environ['DISCORD_TOKEN'])
+
+
+
+
+
+
+
+
+
+
